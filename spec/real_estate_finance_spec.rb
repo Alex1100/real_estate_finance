@@ -6,10 +6,6 @@ describe RealEstateFinance do
       expect(RealEstateFinance::VERSION).not_to be nil
     end
 
-    it "does something useful" do
-      expect(true).to eq(true)
-    end
-
     it "tests gross potential income" do
       gpi = RealEstateFinance::GrossPotentialIncome.new(34000).gross_potential_income
       expect(gpi).to eql(408000.0)
