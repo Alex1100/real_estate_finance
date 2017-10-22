@@ -1,5 +1,5 @@
 module RealEstateFinance
-  class EstimatedPropertyValueByGRM
+  class EstimatedPropertyValueFromGRM
 
     attr_reader :market_value, :monthly_income
 
@@ -8,7 +8,7 @@ module RealEstateFinance
       @monthly_income = monthly_income
     end
 
-    def estimated_property_value
+    def estimated_property_value_from_grm
       annual_gross_potential_income = sprintf("%0.02f", (@monthly_income * 12)).to_f
       calculation = @market_value.to_i / (annual_gross_potential_income)
       grm = sprintf("%0.03f", calculation).to_f

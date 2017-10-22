@@ -62,14 +62,14 @@ describe RealEstateFinance do
       expect(grm).to eql(4.167)
     end
 
-    it "tests estimated property value by gross rent multiplier" do
+    it "tests estimated property value from gross rent multiplier" do
       market_value = 2500000
       monthly_income = 50000
 
-      estimated_value = RealEstateFinance::EstimatedPropertyValueByGRM.new(
+      estimated_value = RealEstateFinance::EstimatedPropertyValueFromGRM.new(
         market_value,
         monthly_income
-      ).estimated_property_value
+      ).estimated_property_value_from_grm
 
       expect(estimated_value).to be(2500200.0)
     end
@@ -127,6 +127,8 @@ describe RealEstateFinance do
       expect(cap_rate).to eql(0.064)
     end
 
-    it "tests estimated property value by capitalization rate"
+    it "tests estimated property value from capitalization rate" do
+
+    end
   end
 end
